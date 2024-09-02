@@ -1,8 +1,8 @@
 [package]
 name = "rateim"
 version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
+description = "GUI app for feedback på IM"
+authors = ["Lasse Havnes"]
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
