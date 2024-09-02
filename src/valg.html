@@ -9,7 +9,7 @@
 
   <body>
     <div class="container c-center">
-      <h1>Hvordan var opplevelsen din med IM?</h1>
+      <h1>Hvor sannsynlig er det at du velger IM?</h1>
 
       <div class="row">
 
@@ -40,7 +40,7 @@
 
     const { invoke } = window.__TAURI__.tauri;
    
-    const opplevelse = localStorage.getItem("opplevelse") ? JSON.parse(localStorage.getItem("opplevelse")) : {
+    const valg = localStorage.getItem("valg") ? JSON.parse(localStorage.getItem("valg")) : {
       1: 0,
       2: 0,
       3: 0,
@@ -50,9 +50,9 @@
     
 
     async function rate(rating){
-      opplevelse[rating] += 1;
-      localStorage.setItem("opplevelse", JSON.stringify(opplevelse))
-      await invoke("rate", {ratings: opplevelse, prefix: "opplevelse"})
+      valg[rating] += 1;
+      localStorage.setItem("valg", JSON.stringify(valg))
+      await invoke("rate", {ratings: valg, prefix: "valg"})
       buttons = document.getElementById("knapper")
      
       for (let i=0; i < rating; i++){
@@ -62,13 +62,14 @@
       setTimeout(() => {
        for (let i = 0; i<rating; i++){
         buttons.children[i].children[0].src = "assets/star-outline.svg"
-       }
-       document.location.href = "valg.html" 
+       } 
+       document.location.href = "takk.html" 
+
       }, 2000)
-      console.log(opplevelse);
       
       
     }
 
   </script>
+
 </html>
