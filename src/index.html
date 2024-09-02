@@ -52,7 +52,7 @@
     async function rate(rating){
       opplevelse[rating] += 1;
       localStorage.setItem("opplevelse", JSON.stringify(opplevelse))
-      await invoke("rate", {ratings: ratings})
+      await invoke("rate", {ratings: opplevelse, prefix: "opplevelse"})
       buttons = document.getElementById("knapper")
      
       for (let i=0; i < rating; i++){
@@ -64,7 +64,7 @@
         buttons.children[i].children[0].src = "assets/star-outline.svg"
        } 
       }, 2000)
-      console.log(ratings);
+      console.log(opplevelse);
       
       
     }
