@@ -20,7 +20,8 @@
       {
         "title": "rateim",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "fullscreen": true
       }
     ],
     "security": {
@@ -28,7 +29,7 @@
     },
     "bundle": {
       "active": true,
-      "targets": "all",
+      "targets": "deb",
       "identifier": "com.rateim.app",
       "icon": [
         "icons/32x32.png",
