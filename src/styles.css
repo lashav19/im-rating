@@ -54,18 +54,18 @@ a:hover {
 
 h1 {
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 input,
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: none;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-
+  background-color: #FFFFFF00;
   transition: border-color 0.25s;
 
 }
@@ -89,7 +89,7 @@ button {
 }
 
 .star{
-  width: 150px;
+  width: 100px;
   height: 150px;
 }
 
@@ -112,18 +112,4 @@ button {
 }
 
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: #f6f6f6;
-    background-color: #2f2f2f;
-  }
 
-  a:hover {
-    color: #24c8db;
-  }
-
-  button{
-    background: none; outline: none; box-shadow: none;
-  }
-
-}
